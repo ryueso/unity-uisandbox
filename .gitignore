@@ -1,0 +1,31 @@
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+[Aa]ssets/Asset Store Resources/
+
+ExportedObj/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+
+*.pidb.meta
+
+sysinfo.txt
+
+# Builds
+*.apk
+*.unitypackage
+
+.idea/
+
+/Assets/ICON/
+/Assets/Plugins/

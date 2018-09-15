@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/Scroll.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 0
+    path: Assets/Scenes/Drag.unity
+    guid: cc3eaa918043d7642b2bd04450b71d7f
+  - enabled: 1
+    path: Assets/Scenes/Alert.unity
+    guid: d7c0c3af379a28b43bd9dfbd4112f2cd
+  - enabled: 0
+    path: Assets/Scenes/Swipe.unity
+    guid: 8e330f29eea1c1c40bf4de838d76ba06
+  m_configObjects: {}
