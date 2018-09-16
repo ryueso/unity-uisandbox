@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class ScrollDebugger : MonoBehaviour
 {
-    public GameObject Item;
+    [SerializeField] private GameObject Item;
 
     void Start()
     {
@@ -23,5 +23,4 @@ public class ScrollDebugger : MonoBehaviour
             }
         }
     }
-
 }

@@ -4,8 +4,9 @@ using UnityEngine.UI;
 
 public class AlertContoller : MonoBehaviour
 {
-    public Text title;
-    public Text message;
+    [SerializeField] public Text title;
+    [SerializeField] public Text message;
+
     private Action okDelegate;
     private Action cancelDelegate;
 
@@ -14,7 +15,8 @@ public class AlertContoller : MonoBehaviour
         String message,
         Action okDelegate = null,
         Action cancelDelegate = null
-    ) {
+    )
+    {
         GameObject prefab = Resources.Load("Alert") as GameObject;
         GameObject alert = Instantiate(prefab);
         AlertContoller controller = alert.GetComponent<AlertContoller>();
@@ -26,7 +28,8 @@ public class AlertContoller : MonoBehaviour
         String message,
         Action okDelegate,
         Action cancelDelegate
-    ) {
+    )
+    {
         this.title.text = title;
         this.message.text = message;
         this.okDelegate = okDelegate;
@@ -38,6 +41,7 @@ public class AlertContoller : MonoBehaviour
         if (okDelegate != null) {
             okDelegate.Invoke();
         }
+
         Destroy(gameObject);
     }
 
@@ -46,7 +50,7 @@ public class AlertContoller : MonoBehaviour
         if (cancelDelegate != null) {
             cancelDelegate.Invoke();
         }
+
         Destroy(gameObject);
     }
-
 }

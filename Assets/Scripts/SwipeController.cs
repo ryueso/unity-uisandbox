@@ -4,7 +4,8 @@ using UnityEngine.UI;
 
 public class SwipeController : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
-    public float speed = 0.2f;
+    [SerializeField] private float speed = 0.2f;
+
     private ScrollRect scroll;
     private GridLayoutGroup grid;
     private bool moving = false;
@@ -43,7 +44,6 @@ public class SwipeController : MonoBehaviour, IDragHandler, IBeginDragHandler, I
                 scroll.content.anchoredPosition.y
             );
         }
-
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -91,5 +91,4 @@ public class SwipeController : MonoBehaviour, IDragHandler, IBeginDragHandler, I
         targetX = -(index * itemWidth);
         moving = true;
     }
-
 }
