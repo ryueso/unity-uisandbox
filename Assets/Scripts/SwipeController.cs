@@ -24,12 +24,6 @@ public class SwipeController : MonoBehaviour, IDragHandler, IBeginDragHandler, I
 
     void Update()
     {
-        if (Application.platform == RuntimePlatform.Android) {
-            if (Input.GetKeyDown(KeyCode.Escape)) {
-                Application.Quit();
-            }
-        }
-
         if (moving) {
             float distance = targetX - scroll.content.anchoredPosition.x;
             float moveTo = scroll.content.anchoredPosition.x + distance * speed;

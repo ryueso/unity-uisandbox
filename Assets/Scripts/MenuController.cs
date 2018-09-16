@@ -56,6 +56,12 @@ public class MenuController : MonoBehaviour
 
     void Update()
     {
+        if (Application.platform == RuntimePlatform.Android) {
+            if (Input.GetKeyDown(KeyCode.Escape)) {
+                Application.Quit();
+            }
+        }
+
         if (moving) {
             float distance = targetX - gameObject.transform.position.x;
             float moveTo = gameObject.transform.position.x + distance * speed;

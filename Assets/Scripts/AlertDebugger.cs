@@ -8,11 +8,6 @@ public class AlertDebugger : MonoBehaviour
 
     void Update()
     {
-        if (Application.platform == RuntimePlatform.Android) {
-            if (Input.GetKeyDown(KeyCode.Escape)) {
-                Application.Quit();
-            }
-        }
     }
 
     public void ShowAlert()

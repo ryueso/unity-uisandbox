@@ -8,11 +8,6 @@ public class DragController : MonoBehaviour
 
     void Update()
     {
-        if (Application.platform == RuntimePlatform.Android) {
-            if (Input.GetKeyDown(KeyCode.Escape)) {
-                Application.Quit();
-            }
-        }
     }
 
     public void SetItem(GameObject item)
