@@ -7,6 +7,7 @@ public class ScrollDebugger : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("started");
         for (int i = 0; i < 100; i++) {
             GameObject button = Instantiate(Item);
             button.transform.SetParent(gameObject.transform);
