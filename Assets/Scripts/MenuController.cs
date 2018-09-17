@@ -52,6 +52,7 @@ public class MenuController : MonoBehaviour
         AddMenu("スクロール", (() => { SceneManager.LoadScene("Scroll"); }));
         AddMenu("スワイプ", (() => { SceneManager.LoadScene("Swipe"); }));
         AddMenu("タブバー", (() => { SceneManager.LoadScene("Tab"); }));
+        AddMenu("HTTP通信", (() => { SceneManager.LoadScene("HTTP"); }));
     }
 
     void Update()

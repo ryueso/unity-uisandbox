@@ -6,11 +6,14 @@ public class AlertContoller : MonoBehaviour
 {
     [SerializeField] public Text title;
     [SerializeField] public Text message;
+    [SerializeField] public GameObject buttons;
+    [SerializeField] public Button okButton;
+    [SerializeField] public Button cancelButton;
 
     private Action okDelegate;
     private Action cancelDelegate;
 
-    public static void Show(
+    public static AlertContoller Show(
         String title,
         String message,
         Action okDelegate = null,
@@ -21,6 +24,8 @@ public class AlertContoller : MonoBehaviour
         GameObject alert = Instantiate(prefab);
         AlertContoller controller = alert.GetComponent<AlertContoller>();
         controller.SetValues(title, message, okDelegate, cancelDelegate);
+
+        return controller;
     }
 
     public void SetValues(
@@ -34,6 +39,18 @@ public class AlertContoller : MonoBehaviour
         this.message.text = message;
         this.okDelegate = okDelegate;
         this.cancelDelegate = cancelDelegate;
+
+        if (okDelegate == null && cancelDelegate == null) {
+            buttons.gameObject.SetActive(false);
+        } else {
+            if (okDelegate == null) {
+                okButton.gameObject.SetActive(false);
+            }
+
+            if (cancelDelegate == null) {
+                cancelButton.gameObject.SetActive(false);
+            }
+        }
     }
 
     public void OnOK()
@@ -53,4 +70,10 @@ public class AlertContoller : MonoBehaviour
 
         Destroy(gameObject);
     }
+
+    public void Dismiss()
+    {
+        Destroy(gameObject);
+    }
+
 }
